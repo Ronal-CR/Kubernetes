@@ -1,4 +1,7 @@
+#kubectl apply -f namespace.yml
+#Establecer por default el namespace  kubectl config set-context --current --namespace=ronaldinho-namespace
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ronaldinhoccencho
+  name: ronaldinho-namespace  
+  

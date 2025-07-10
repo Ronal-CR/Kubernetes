@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ronaldinho-service
+spec:
+  selector:
+    app: deploy #Debe coincidir con el app del deployment
+  ports:
+  - port: 8087 #Puerto que usa el service
+    targetPort: 8090 #Puerto debe coincidir con el contenedor dockerfile

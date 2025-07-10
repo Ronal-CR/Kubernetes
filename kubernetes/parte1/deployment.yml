@@ -1,0 +1,26 @@
+# Comandos usados
+#kubectl apply -f deployment.yml
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ronaldinho-deployment #Nombre que figurara en el namespace
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deploy
+  template:
+    metadata:
+      labels:
+        app: deploy
+    spec:
+      containers:
+      - name: kubernetes-deploy
+        image: ronaldinhoccencho/kubernetes:3.0
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
